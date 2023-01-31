@@ -1,4 +1,12 @@
 ﻿export function afterStarted(Blazor) {
+    Blazor.registerCustomEventType('userchange', {
+        browserEventName: 'click',
+        createEventArgs: event => {
+            return {
+                value: event.target.value
+            };
+        }
+    });
     Blazor.registerCustomEventType('checkedchange', {
         browserEventName: 'change',
         createEventArgs: event => {

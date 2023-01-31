@@ -24,4 +24,10 @@ public partial class FluentRadioGroup : FluentInputBase<string?>
         validationErrorMessage = null;
         return true;
     }
+
+    protected override bool ShouldRender()
+    {
+        Thread.Sleep(300);
+        return true;
+    }
 }

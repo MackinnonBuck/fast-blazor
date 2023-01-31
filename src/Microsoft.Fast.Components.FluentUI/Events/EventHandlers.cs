@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components;
 namespace Microsoft.Fast.Components.FluentUI;
 
 
+[EventHandler("onuserchange", typeof(ChangeEventArgs), enableStopPropagation: true, enablePreventDefault: true)]
 [EventHandler("oncheckedchange", typeof(CheckboxChangeEventArgs), enableStopPropagation: true, enablePreventDefault: true)]
 [EventHandler("ontabchange", typeof(TabChangeEventArgs), enableStopPropagation: true, enablePreventDefault: true)]
 [EventHandler("onselectedchange", typeof(TreeChangeEventArgs), enableStopPropagation: true, enablePreventDefault: true)]
